@@ -16,9 +16,9 @@ builder.Services.AddScoped<IEmailService,EmailService>();
 
 
 var app = builder.Build();
-if(app.Environment.IsProduction())
+if (app.Environment.IsProduction())
 {
-    var jsonObject = Environment.GetEnvironmentVariable("EmailSettings");
+    var jsonObject = configuration["EmailSettings"];
     EmailSettingModel.Instance = configuration.GetSection(jsonObject).Get<EmailSettingModel>();
 }
 
