@@ -16,11 +16,7 @@ builder.Services.AddScoped<IEmailService,EmailService>();
 
 
 var app = builder.Build();
-if (app.Environment.IsProduction())
-{
-    var jsonObject = configuration["EmailSettings"];
-    EmailSettingModel.Instance = configuration.GetSection(jsonObject).Get<EmailSettingModel>();
-}
+
 
 // Configure the HTTP request pipeline.
 /*if (app.Environment.IsDevelopment())
