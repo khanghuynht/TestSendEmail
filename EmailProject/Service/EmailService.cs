@@ -19,7 +19,7 @@ namespace EmailProject.Service
             {
                 MailMessage message = new MailMessage()
                 {
-                    Subject = "[Test] First Send",
+                    Subject = "[Reset Password] OTP For Reset Password",
                     IsBodyHtml = false,
                     Body = model.Content
                 };
