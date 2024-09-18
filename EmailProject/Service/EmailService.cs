@@ -20,7 +20,7 @@ namespace EmailProject.Service
                 MailMessage message = new MailMessage()
                 {
                     Subject = "[Reset Password] OTP For Reset Password",
-                    IsBodyHtml = false,
+                    IsBodyHtml = true,
                     Body = model.Content
                 };
                 message.From = new MailAddress(EmailSettingModel.Instance.FromEmailAddress, EmailSettingModel.Instance.FromDisplayName);
